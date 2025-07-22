@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Creacion Web Sebas</title>
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Lato&family=Quicksand:wght@400;600&family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+  <div class="corazones"></div>
+ <!-- Login -->
+ <div id="pantalla-inicial">
+  <div class="login-card">
+    <h2>Hola mi vida 🌸</h2>
+    <p>Solo tú sabes la palabra secreta para abrir esta sorpresa.</p>
+    <input type="password" id="clave" placeholder="Escríbela aquí" />
+    <button onclick="validarClave()">Entrar</button>
+    <p id="mensaje-error">No nooooo esa no es la contraseña, intenta otra vez.</p>
+  </div>
+</div>
+
+
+  <!-- PANTALLA 1: Bienvenida -->
+  <div id="pantalla-bienvenida" class="pantalla visible">
+    <div class="contenedor-carta">
+   <div class="contenedor-carta1">   <h1>Esto es ❤️</h1> </div>
+    <img src="gifs/2.gif" alt="Corazón latiendo" style="width: 200px; border-radius: 15px; margin: 20px auto; display: block;">
+
+     <h1 id="texto-maquina" class="fade-in"></h1>
+      <button id="btn-entrar">Entrar ❤️</button>
+    </div>
+  </div>
+
+  <!-- PANTALLA 2: Carta 1 -->
+  <div id="pantalla-carta1" class="pantalla oculto">
+    <div class="contenedor-carta1">
+    <div class="contenedor-carta1">   <h1>Para ti ❤️</h1> </div> <br>
+      <p>Hola Micaela, mi vidaaa hermosa.</p>
+      <p>Hoy quiero hacerte un regalo especial.</p>
+      <p>Esto lo hice con todo mi corazón para ti, burracha hermosa.</p>
+      <p>Espero que te guste y te haga sonreír.</p>
+     <img src="gifs/3.gif" alt="Corazón latiendo" style="width: 200px; border-radius: 15px; margin: 20px auto; display: block;">
+
+      <p>Así es como un futuro Ingeniero se las ingenia para verte feliz.</p>
+      <p>TQM, mi vidaaaaa.</p>
+      <button id="btn-siguiente-carta1">Siguiente ❤️</button>
+    </div>
+  </div>
+
+  <!-- PANTALLA 3: Carta 2 -->
+  <div id="pantalla-carta2" class="pantalla oculto">
+    <div class="contenedor-carta1">
+         <div class="contenedor-carta1">   <h1>Con mucho amor ❤️</h1> </div>
+     <img src="gifs/4.gif" alt="Corazón latiendo" style="width: 400px; border-radius: 15px; margin: 20px auto; display: block;">
+
+      <p>Micaela, o mejor dicho, mi todo...</p>
+      <p>Hoy quiero recordarte lo especial que eres para mí.</p>
+      <p>Desde que llegaste a mi vida oh mejor dicho desde que te escribi, mi vida cambio.</p>
+      <p>Gracias por ser la persona maravillosa que eres.</p>
+      <p>Siempre estaré aquí para ti, apoyándote y amándote.</p>
+      <p>Gracias por existir y cruzarte en mi vida.</p>
+      <p>Te quiero muchísimo. ❤️</p>
+      <button id="btn-siguiente-carta2">Siguiente ❤️</button>
+    </div>
+  </div>
+
+  <!-- PANTALLA 4: Razones -->
+  <div id="pantalla-razones" class="pantalla oculto">
+    <div class="contenedor-carta1">
+       <div class="contenedor-carta1">   <h1>Y Cariño ❤️</h1> </div> <br>
+      <p>Te quiero por tantas razones, Micaela.</p>
+      <p>Estas son algunas de las razones por las que te voy a pedir ser mi ____❤️</p> 
+      <ul id="lista-razones"></ul>
+      <button id="btn-siguiente-razones">Siguiente ❤️</button>
+    </div>
+  </div>
+
+  <!-- PANTALLA 5: Juego -->
+  <div id="pantalla-juego" class="pantalla oculto">
+    <div class="contenedor-carta1">
+       <div class="contenedor-carta1">   <h1>Juega conmigo ❤️</h1> </div> <br>
+      <p>Solo toca los corazones que laten... No te equicoques!</p> <br>
+      <div id="area-juego"></div>
+      <p id="mensaje-juego"></p>
+      <button id="btn-siguiente-juego" class="oculto">Ver la pregunta ❤️</button>
+    </div>
+  </div>
+
+  <!-- Aquime quede -->
+  <!-- PANTALLA 6: Pregunta -->
+  <div id="pantalla-pregunta" class="pantalla oculto">
+    <div class="contenedor-carta1">
+      <div class="contenedor-carta1">   <h1>Micaela... ❤️</h1> </div> <br>
+      <p>Me haces tan feliz... quiero preguntarte algo.</p>
+      <p>Quizas ya sepas de lo que se trata.</p>
+      <p>Cuando el contador llegue a 0, podrás responder.</p>  
+      <div id="contador">3</div>
+      <h2 id="texto-pregunta" class="oculto">
+       <div> Micaelaaaaaaaaaaa </div>
+       ¿Quieres ser mi novia? ❤️
+       <img src="gifs/8.gif" alt="Corazón latiendo" style="width: 400px; border-radius: 15px; margin: 20px auto; display: block;">
+      </h2>
+      <div id="botones-pregunta" class="oculto">
+        <button id="btn-si">Sí acepto ❤️</button>
+        <button id="btn-claro">No, lo dudes ❤️</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- PANTALLA 7: Respuesta -->
+  <div id="pantalla-respuesta" class="pantalla oculto">
+    <div class="contenedor-carta1">
+      <div class="contenedor-carta1">   <h1>Sabia que dirias que si mi amor!! ❤️</h1> </div> <br>
+      <p>Gracias por aceptar ser mi novia. Esto es solo el comienzo.</p>
+      <p>Te prometo hacerte feliz cada día.</p>
+      <p>Llenarte de amor y cariño por que te mereces eso y mas.</p>
+
+
+       <img src="gifs/9.gif" alt="Corazón latiendo" style="width: 280px;height: 280px; border-radius: 15px; margin: 20px auto; display: block;">
+
+      <button id="btn-aventuras">Nuestros planes ❤️</button>
+    </div>
+  </div>
+
+<!-- PANTALLA 8: Aventuras -->
+<div id="pantalla-aventuras" class="pantalla oculto">
+  <div class="contenedor-carta1">
+    <div class="contenedor-carta1">   <h1>M y S ❤️</h1> </div> <br>
+     <img src="gifs/10.gif" alt="Corazón latiendo" style="width: 400px;height: 200px; border-radius: 15px; margin: 20px auto; display: block;">
+      
+    <ul id="lista-aventuras">
+      <li>- Ver pelis abrazados.</li>
+      <li>- Festejar nuestros meses.</li>
+      <li>- Viajar a tu lugar favorito.</li>
+    </ul> <br>
+    <p>Esto es solo el comienzo de algo muy bonito.</p>
+    <p>Gracias por ser parte de mi vida.</p>
+    <p> Esto es un recuerdo</p>
+    <button id="btn-descargar-pdf">Descargar recuerdo ❤️</button> <br>
+<!--     <button onclick="location.reload()">Volver a ver ❤️</button> -->
+  </div>
+</div>
+
+  <div id="confeti"></div>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script>
+<script src="script.js"></script>
+
+</body>
+</html>
